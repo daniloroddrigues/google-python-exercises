@@ -25,8 +25,16 @@
 # and donuts(23) returns 'Number of donuts: many'
 def donuts(count):
     # +++your code here+++
+    many = 'Number of donuts: many'
+    string = 'Number of donuts: %d' % count
 
-    return
+    if count >= 10:
+
+        return many
+
+    else:
+
+        return string
 
 
 # B. both_ends

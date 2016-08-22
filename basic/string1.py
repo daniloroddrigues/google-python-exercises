@@ -27,13 +27,9 @@ def donuts(count):
     # +++your code here+++
     many = 'Number of donuts: many'
     string = 'Number of donuts: %d' % count
-
     if count >= 10:
-
         return many
-
     else:
-
         return string
 
 
@@ -44,8 +40,16 @@ def donuts(count):
 # is less than 2, return instead the empty string.
 def both_ends(s):
     # +++your code here+++
-    return
-
+    count = len(s)
+    string = ''
+    if count >= 4:
+        string = s[0:2:1] + s[-2::1]
+        return string
+    elif count == 3:
+        string = s[-2] + s[-2]
+        return string
+    else:
+        return string
 
 # C. fix_start
 # Given a string s, return a string

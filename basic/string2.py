@@ -18,8 +18,13 @@
 # Return the resulting string.
 def verbing(s):
     # +++your code here+++
-    return
-
+    if len(s) < 3:
+        return s
+    else:
+        if s[4:] == 'ing':
+            return s + 'ly'
+        else:
+            return s + 'ing'
 
 # E. not_bad
 # Given a string, find the first appearance of the

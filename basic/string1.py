@@ -44,18 +44,6 @@ def donuts(count):
 # is less than 2, return instead the empty string.
 def both_ends(s):
     # +++your code here+++
-    # count = len(s)
-    # string = ''
-    # if count >= 4:
-    #     string = s[0:2:1] + s[-2::1]
-    #     return string
-    # elif count == 3:
-    #     print(s)
-    #     string = s[-2] + s[-2]
-    #     return string
-    # else:
-    #     return string
-
     if len(s) < 2:
         return ''
     return s[0:2] + s[-2:]

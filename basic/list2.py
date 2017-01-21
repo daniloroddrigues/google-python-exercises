@@ -15,7 +15,7 @@
 # modify the passed in list.
 def remove_adjacent(nums):
     # +++your code here+++
-    return
+    return list(set(nums))
 
 
 # E. Given two lists sorted in increasing order, create and return a merged
@@ -24,7 +24,9 @@ def remove_adjacent(nums):
 # pass of both lists.
 def linear_merge(list1, list2):
     # +++your code here+++
-    return
+    list3 = list1 + list2
+    list3.sort()
+    return list3
 
 
 # Note: the solution above is kind of cute, but unforunately list.pop(0)
@@ -55,12 +57,9 @@ def main():
 
     print()
     print('linear_merge')
-    test(linear_merge(['aa', 'xx', 'zz'], ['bb', 'cc']),
-         ['aa', 'bb', 'cc', 'xx', 'zz'])
-    test(linear_merge(['aa', 'xx'], ['bb', 'cc', 'zz']),
-         ['aa', 'bb', 'cc', 'xx', 'zz'])
-    test(linear_merge(['aa', 'aa'], ['aa', 'bb', 'bb']),
-         ['aa', 'aa', 'aa', 'bb', 'bb'])
+    test(linear_merge(['aa', 'xx', 'zz'], ['bb', 'cc']), ['aa', 'bb', 'cc', 'xx', 'zz'])
+    test(linear_merge(['aa', 'xx'], ['bb', 'cc', 'zz']), ['aa', 'bb', 'cc', 'xx', 'zz'])
+    test(linear_merge(['aa', 'aa'], ['aa', 'bb', 'bb']), ['aa', 'aa', 'aa', 'bb', 'bb'])
 
 
 if __name__ == '__main__':
